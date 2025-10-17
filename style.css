@@ -1,0 +1,227 @@
+/* --- Google Fonts Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Roboto:wght@400;700&display=swap');
+
+/* --- CSS Variables (Our Color & Font Palette) --- */
+:root {
+    --primary-color: #007BFF; /* A vibrant electric blue */
+    --secondary-color: #FFA500; /* A fun orange for accents */
+    --dark-grey: #333333;      /* For main text, very readable */
+    --light-grey: #f4f4f4;     /* For backgrounds and separators */
+    --white-color: #FFFFFF;
+    
+    --font-headings: 'Poppins', sans-serif;
+    --font-body: 'Roboto', sans-serif;
+}
+
+/* --- Global & Reset Styles --- */
+body {
+    font-family: var(--font-body);
+    margin: 0;
+    padding: 0;
+    background-color: var(--white-color);
+    color: var(--dark-grey);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: var(--font-headings);
+    color: var(--dark-grey);
+    font-weight: 700;
+}
+
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- Header & Navigation Styling --- */
+header {
+    background-color: var(--white-color);
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--light-grey);
+    text-align: center;
+}
+
+header .logo .header-logo {
+    height: 80px; /* Adjust this value for the logo height */
+    width: auto;
+    display: block;
+    margin: 0 auto 10px auto; /* Center it horizontally with a small bottom margin */
+}
+
+.tagline-img {
+    max-width: 250px;
+    height: auto;
+    margin: 0 auto 5px auto; /* Center the image */
+}
+
+header nav {
+    margin-top: 1rem;
+}
+
+header nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+header nav a {
+    font-weight: 700;
+    font-size: 1rem;
+    padding: 5px 0;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+header nav a:hover, header nav a.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+    text-decoration: none;
+}
+
+/* --- Hero Section Styling (Home Page) --- */
+.hero {
+    background-color: var(--light-grey);
+    text-align: center;
+    padding: 4rem 0;
+}
+
+.hero-subtitle {
+    font-family: var(--font-body);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+/* --- Page Header Styling (Inner Pages) --- */
+.page-header {
+    background-color: var(--dark-grey);
+    color: var(--white-color);
+    text-align: center;
+    padding: 3rem 0;
+}
+
+.page-header h1 {
+    color: var(--white-color);
+    font-size: 2.8rem;
+    margin: 0;
+}
+
+.page-header p {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-top: 0.5rem;
+}
+
+/* --- Review Card & Grid Styling --- */
+.featured-reviews, .all-reviews {
+    padding: 4rem 0;
+}
+
+.review-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.review-card {
+    background: var(--white-color);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+}
+
+.review-card .card-content {
+    padding: 1.5rem;
+}
+
+.review-card h3 {
+    margin-top: 0;
+    font-size: 1.4rem;
+}
+
+.review-card p {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+}
+
+.review-card a {
+    font-weight: 700;
+}
+
+/* --- About & Contact Page Content Styling --- */
+.about-content, .contact-form-section {
+    padding: 4rem 0;
+}
+
+.about-content ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.about-content li {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%23007BFF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>') no-repeat left center;
+    padding-left: 35px;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+/* --- Contact Form Styling --- */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-family: var(--font-body);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+form .button {
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
